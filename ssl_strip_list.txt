@@ -1,0 +1,10 @@
+#Add all the ip addresses that you know must have ssl.
+# Syntax:  
+#   <ip address>	<#domainname(optional)>
+
+
+69.64.79.98			#jnetpcap.com
+216.58.218.110			#google.com
+157.240.3.35			#facebook.com
+216.58.218.174			#youtube.com
+199.59.148.82			#twitter.com

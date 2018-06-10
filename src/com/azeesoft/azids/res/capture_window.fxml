@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #333;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.azeesoft.azids.controllers.CaptureController">
+    <padding>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+    </padding>
+    <children>
+        <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="NEVER" maxWidth="77.0" minWidth="70.0" prefWidth="70.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+                <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="20.0" vgrow="NEVER" />
+                <RowConstraints fillHeight="false" maxHeight="74.0" minHeight="11.0" prefHeight="20.0" vgrow="NEVER" />
+                <RowConstraints minHeight="9.0" vgrow="SOMETIMES" />
+                <RowConstraints fillHeight="false" />
+            </rowConstraints>
+            <children>
+                <Label text="IDS" textFill="WHITE" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Roboto Regular" size="25.0" />
+                    </font>
+                    <effect>
+                        <DropShadow offsetX="4.0" offsetY="4.0" />
+                    </effect>
+                </Label>
+                <ScrollPane pannable="true" style="-fx-background-color: #2a2a2a; -fx-background: #222;" stylesheets="@../css/scroll.css" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0">
+                            <children>
+                        <Label fx:id="console" style="-fx-text-fill: #a8dd21;" text="Click &quot;Start Capturing&quot; to continue" textFill="#a8dd21" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+               <GridPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </padding>
+                </ScrollPane>
+            <Label fx:id="selDevLabel" textFill="WHITE" GridPane.columnIndex="1" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <HBox alignment="CENTER" spacing="20.0">
+                     <children>
+                        <CheckBox fx:id="cbDumpCAP" mnemonicParsing="false" selected="true" text="Dump .cap file" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="cbSavePacketInfo" mnemonicParsing="false" selected="true" text="Save Packet Info" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="cbDetectSSLStripping" mnemonicParsing="false" selected="true" text="Detect SSL Stripping" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                      <Button fx:id="captureBtn" mnemonicParsing="false" onAction="#startCapturing" style="-fx-background-color: teal;" text="Start Capturing" textFill="WHITE">
+                          <font>
+                              <Font name="Roboto Regular" size="15.0" />
+                          </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                      </Button>
+               </children>
+            </VBox>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>
